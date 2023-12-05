@@ -1,0 +1,24 @@
+{
+    "name": "@focia/bot",
+    "module": "src/index.ts",
+    "type": "module",
+    "devDependencies": {
+        "bun-types": "latest",
+        "typescript": "^5.0.0"
+    },
+    "dependencies": {
+        "@discordjs/core": "^1.1.1",
+        "discord.js": "^14.14.1",
+        "@focia/initialise": "*",
+        "@focia/logger": "*",
+        "@focia/utils": "*",
+        "@focia/database": "*",
+        "@focia/schema": "*",
+        "@focia/constant": "*"
+    },
+    "scripts": {
+        "dev": "bun --watch src/bot.ts",
+        "build": "bun build src/index.ts --outdir ./dist --target bun --external=zlib-sync",
+        "start": "bun dist/index.js"
+    }
+}
